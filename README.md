@@ -25,6 +25,16 @@ vim-enhanced-7.4.160-5.el7.x86_64
 # 配置示例
 [root@huzhi-code ~]# cat /usr/share/vim/vim74/vimrc_example.vim
 
+# 自定义配置
+[root@huzhi-code ~]# ll -a | grep vim
+drwxr-x---   3 root root        22 Sep 24 11:35 .vim
+-rw-------   1 root root      8456 Sep 24 11:10 .viminfo
+-rw-r--r--   1 root root      6943 Sep 24 11:07 .vimrc
+-rw-r--r--   1 root root      1702 Sep 24 11:43 .vimrc.bundles
+-rw-r--r--   1 root root      2562 Sep 24 11:43 .vimrc.bundles_settings
+-rw-r--r--   1 root root      2396 Sep 24 11:44 .vimrc.keys
+[root@huzhi-code ~]#
+
 ```
 
 ### Vim 插件
