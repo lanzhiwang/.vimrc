@@ -34,6 +34,7 @@ vim-enhanced-7.4.160-5.el7.x86_64
 * [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
 
 ```bash
+# 使用 vim-plug 插件管理器
 [root@huzhi-code ~]# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 >     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
