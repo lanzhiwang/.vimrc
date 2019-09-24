@@ -1,0 +1,86 @@
+" 主题配置 {{{
+    " 官方推荐molokai设置
+    let g:molokai_original = 1
+    " 设置背景颜色
+    set background=dark
+    " 此配置在无图形界vim中必须有，否则主题不能生效
+    set t_Co=256
+    " 应用主题
+    "colorscheme solarized
+    "colorscheme molokai
+" }}}
+
+" airline状态栏 {{{
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    let g:airline_left_sep = '▶'
+    let g:airline_left_alt_sep = '❯'
+    let g:airline_right_sep = '◀'
+    let g:airline_right_alt_sep = '❮'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.branch = '⎇'
+    " 是否打开tabline
+    " let g:airline#extensions#tabline#enabled = 1
+" }}}
+"ale语法检查 {{{
+"   "始终开启标志列
+    let g:ale_sign_column_always = 1 
+    let g:ale_set_highlights = 0 
+    "自定义error和warning图标
+    let g:ale_sign_error = '✗' 
+    let g:ale_sign_warning = '⚡'
+    "在vim自带的状态栏中整合ale
+    "let g:ale_statusline_format = ['✗ %d', '⚡, %d', '✔ OK']
+    "显示Linter名称,出错或警告等相关信息
+    let g:ale_echo_msg_error_str = 'E' 
+    let g:ale_echo_msg_warning_str = 'W' 
+    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+    " ALE插件状态栏显示错误 
+    let g:airline#extensions#ale#enabled = 1 
+" }}}
+"       
+" vim-easymotion快速移动 {{{
+    let g:EasyMotion_smartcase = 1 
+" }}}                                    
+"
+" tagbar标签 {{{
+    let g:tagbar_autofocus = 1    
+"}}}
+"
+" 文本搜索ctrlp {{{
+	let g:ctrlp_map = '<leader>p'
+  	let g:ctrlp_cmd = 'CtrlP'
+	let g:ctrlp_custom_ignore = { 
+    \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
+    \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
+    \ }
+  	let g:ctrlp_working_path_mode=0
+  	let g:ctrlp_match_window_bottom=1
+  	let g:ctrlp_max_height=15
+  	let g:ctrlp_match_window_reversed=0
+  	let g:ctrlp_mruf_max=500
+  	let g:ctrlp_follow_symlinks=1 
+" }}}
+"
+" 自动补全neocomplete {{{
+	let g:acp_enableAtStartup = 0
+	let g:neocomplete#enable_at_startup = 1
+	let g:neocomplete#enable_smart_case = 1
+	let g:neocomplete#sources#syntax#min_keyword_length = 3
+	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" }}}
+"
+" Emmet配置仅仅支持HTML和CSS以及快捷键为Ctrl+Z {{{
+    let g:user_emmet_install_global = 0
+    autocmd FileType html,css EmmetInstall
+    let g:user_emmet_leader_key='<C-Z>'
+" }}}
+"
+" vim-javascript插件 {{{
+    let javascript_enable_domhtmlcss = 1
+" }}}
+"
+" jedi-vim插件 {{{
+    let g:jedi#completions_command = "<C-U>"
+" }}}

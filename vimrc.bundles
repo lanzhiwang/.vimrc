@@ -1,0 +1,89 @@
+call plug#begin('~/.vim/plugged') "启动plug管理vim插件
+
+" 主题插件 {{{
+    " solarized
+    Plug 'altercation/vim-colors-solarized'
+    " molokai
+    Plug 'tomasr/molokai'
+" }}}
+ 
+"
+" 自动补全替换YCM {{{
+      Plug 'shougo/neocomplete.vim'
+" }}}      
+" 
+" 状态栏增强展示 {{{
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+" }}}
+ 
+" 语法检测 {{{
+    if v:version < 800
+        Plug 'scrooloose/syntastic'
+    else
+        Plug 'w0rp/ale'
+    endif
+" }}}
+
+" 自动补全单引号，双引号等 {{{
+    Plug 'Raimondi/delimitMate'
+" }}}
+
+" 快速注释 {{{
+    Plug 'scrooloose/nerdcommenter'
+" }}}
+" 使用Tab键来补全 {{{
+    Plug 'ervandew/supertab'
+" }}}
+"
+" 全局搜索插件 {{{
+    Plug 'mileszs/ack.vim'
+" }}}
+" bash脚本插件 {{{
+    Plug 'vim-scripts/bash-support.vim'
+" }}}
+"
+" 目录树插件 {{{
+    Plug 'scrooloose/nerdtree'
+" }}}
+" Python补全 {{{
+    Plug 'davidhalter/jedi-vim'
+" }}}
+" Python pipenv虚拟环境 {{{
+    Plug 'plytophogy/vim-virtualenv'
+    Plug 'pieterjanmontens/vim-pipenv'
+" }}}
+" 
+" 语义补全 {{{
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'tomtom/tlib_vim'
+    Plug 'garbas/vim-snipmate'
+    Plug 'honza/vim-snippets'
+" }}}
+"
+" 快速移动 {{{
+    Plug 'Lokaltog/vim-easymotion'
+" }}}
+"
+" 标签导航 {{{
+  	Plug 'majutsushi/tagbar'
+" }}}
+" 
+" 文本搜索 {{{
+    Plug 'ctrlpvim/ctrlp.vim' 
+" }}}
+"
+" Markdown插件 {{{
+    Plug 'tpope/vim-markdown'
+    Plug 'suan/vim-instant-markdown'
+" }}}
+"
+" HTML,CSS补全插件 {{{
+    Plug 'mattn/emmet-vim'
+" }}}
+"
+" JavaScript插件 {{{
+    Plug  'pangloss/vim-javascript' "语法高亮插件
+" }}}
+call plug#end() "结束,并执行一些设置
+
